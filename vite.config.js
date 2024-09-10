@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         geolocation: resolve(__dirname, '01-geolocation/index.html'),
+        map_location: resolve(__dirname, `02-map-position/index.html`),
       },
     },
   },
