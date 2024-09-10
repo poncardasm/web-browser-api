@@ -12,7 +12,7 @@ navigator.geolocation.getCurrentPosition(function (pos) {
   const lng = pos.coords.longitude;
 
   marker.setLatLng([lat, lng]).update();
-  map.setView([lat, lng], 13);
+  map.setView([lat, lng], 15);
 
   marker.bindPopup('Hello world!');
 });
