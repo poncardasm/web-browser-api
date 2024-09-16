@@ -9,6 +9,7 @@ export default defineConfig({
         geolocation: resolve(__dirname, '01-geolocation/index.html'),
         map_location: resolve(__dirname, `02-map-position/index.html`),
         canvas_api: resolve(__dirname, `03-canvas-api/index.html`),
+        animated_clock_1: resolve(__dirname, `05-animated-clock-1/index.html`),
       },
     },
   },
