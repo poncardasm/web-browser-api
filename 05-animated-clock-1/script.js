@@ -68,6 +68,8 @@ function clock() {
   const min = now.getMinutes();
   const sec = now.getSeconds();
 
+  console.log(`${hr}:${min}:${sec}`);
+
   // Draw hour hand
   ctx.save();
 
@@ -101,7 +103,7 @@ function clock() {
 
   ctx.rotate((sec * Math.PI) / 30);
   ctx.strokeStyle = `#E744E7`;
-  ctx.fillStyle = `#099250`;
+  ctx.fillStyle = `#E744E7`;
   ctx.lineWidth = 4;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -115,6 +117,8 @@ function clock() {
 
   // Restore default state
   ctx.restore();
+
+  requestAnimationFrame(clock);
 }
 
-clock();
+requestAnimationFrame(clock);
