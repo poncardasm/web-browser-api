@@ -1,3 +1,9 @@
+const faceColor = document.getElementById('face-color');
+const borderColor = document.getElementById('border-color');
+const lineColor = document.getElementById('line-color');
+const largeColor = document.getElementById('large-hand-color');
+const secondsColor = document.getElementById('seconds-hand-color');
+
 function clock() {
   const now = new Date();
 
@@ -29,7 +35,7 @@ function clock() {
   ctx.save();
 
   ctx.beginPath();
-  ctx.strokeStyle = '#444CE7';
+  ctx.strokeStyle = borderColor.value;
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fill();
