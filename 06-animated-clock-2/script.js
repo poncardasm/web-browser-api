@@ -35,7 +35,9 @@ function clock() {
   ctx.save();
 
   ctx.beginPath();
+  ctx.lineWidth = 14;
   ctx.strokeStyle = borderColor.value;
+  ctx.fillStyle = faceColor.value;
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fill();
