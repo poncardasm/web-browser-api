@@ -1,35 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #0c111d;
+  --text-color: #344054;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Onest', sans-serif;
   font-size: 18px;
 }
 
-button {
-  background: #333;
-  color: #fff;
-  border: 0;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+.container {
+  display: flex;
+  align-items: center;
 }
 
-.card {
-  background: #f4f4f4;
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 7px 20px;
-  width: 300px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+#canvas {
+  /* border: solid 1px #333; */
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+button {
+  font-family: Onest;
+  font-size: 16px;
+  background: var(--primary-color);
+  color: #fff;
+  border: 0;
+  padding: 16px 22px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .form-input {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  border-radius: 4px;
+  inline-size: 100px;
+  block-size: 40px;
 }
 
 label {
-  margin-right: 10px;
+  margin-right: 16px;
   font-weight: bold;
+  color: var(--text-color);
 }

@@ -7,37 +7,43 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-    <title>Animated Clock Challenge</title>
+    <title>02 — Animated Clock 2</title>
   </head>
   <body>
-    <div class="card">
-      <h3>Clock Style</h3>
-      <form>
+    <div class="container">
+      <canvas id="canvas" width="500" height="500"></canvas>
+
+      <form id="clock-style">
+        <h2>Clock Style</h2>
         <div class="form-input">
           <label for="face-color">Face Color</label>
-          <input type="color" value="#f4f4f4" id="face-color" />
+          <input type="color" value="#ffffff" id="face-color" />
         </div>
+
         <div class="form-input">
           <label for="border-color">Border Color</label>
-          <input type="color" value="#800000" id="border-color" />
+          <input type="color" value="#444CE7" id="border-color" />
         </div>
+
         <div class="form-input">
           <label for="line-color">Number Lines Color</label>
-          <input type="color" value="#000000" id="line-color" />
+          <input type="color" value="#0c111d" id="line-color" />
         </div>
+
         <div class="form-input">
-          <label for="large-hand-color">Large Hands Color</label>
-          <input type="color" value="#800000" id="large-hand-color" />
+          <label for="large-hand-color">Hour and Minute Hand</label>
+          <input type="color" value="#444CE7" id="large-hand-color" />
         </div>
+
         <div class="form-input">
-          <label for="second-hand-color">Second Hand Color</label>
+          <label for="second-hand-color">Seconds Hand</label>
           <input type="color" value="#FF7F50" id="second-hand-color" />
         </div>
+
         <div class="form-input">
           <button id="save-btn" type="submit">Save As Image</button>
         </div>
       </form>
     </div>
-    <canvas id="canvas" width="500" height="500"></canvas>
   </body>
 </html>
