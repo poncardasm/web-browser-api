@@ -1,3 +1,8 @@
+/**
+ * @type {HTMLCanvasElement}
+ */
+const canvas = document.getElementById('canvas');
+
 const faceColor = document.getElementById('face-color');
 const borderColor = document.getElementById('border-color');
 const lineColor = document.getElementById('line-color');
@@ -6,11 +11,6 @@ const secondsHandColor = document.getElementById('seconds-hand-color');
 
 function clock() {
   const now = new Date();
-
-  /**
-   * @type {HTMLCanvasElement}
-   */
-  const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
 
   // SETUP CANVAS
