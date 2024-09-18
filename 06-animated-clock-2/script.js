@@ -1,8 +1,8 @@
 const faceColor = document.getElementById('face-color');
 const borderColor = document.getElementById('border-color');
 const lineColor = document.getElementById('line-color');
-const largeColor = document.getElementById('large-hand-color');
-const secondsColor = document.getElementById('seconds-hand-color');
+const hourMinuteHandColor = document.getElementById('hour-minute-hand-color');
+const secondsHandColor = document.getElementById('seconds-hand-color');
 
 function clock() {
   const now = new Date();
@@ -35,7 +35,7 @@ function clock() {
   ctx.save();
 
   ctx.beginPath();
-  ctx.lineWidth = 14;
+  ctx.lineWidth = 20;
   ctx.strokeStyle = borderColor.value;
   ctx.fillStyle = faceColor.value;
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
@@ -46,6 +46,7 @@ function clock() {
 
   // Draw hour ticks
   ctx.save();
+  ctx.strokeStyle = lineColor.value;
   for (let i = 0; i < 12; i++) {
     ctx.beginPath();
     ctx.rotate(Math.PI / 6);
@@ -58,6 +59,7 @@ function clock() {
 
   // Draw minute ticks
   ctx.save();
+  ctx.strokeStyle = lineColor.value;
   ctx.lineWidth = 4;
   for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
@@ -84,7 +86,7 @@ function clock() {
   ctx.rotate(
     (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
   );
-  ctx.strokeStyle = `#444CE7`;
+  ctx.strokeStyle = hourMinuteHandColor.value;
   ctx.lineWidth = 10;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -97,7 +99,7 @@ function clock() {
   ctx.save();
 
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
-  ctx.strokeStyle = `#444CE7`;
+  ctx.strokeStyle = hourMinuteHandColor.value;
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-28, 0);
@@ -110,8 +112,8 @@ function clock() {
   ctx.save();
 
   ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = `#E744E7`;
-  ctx.fillStyle = `#E744E7`;
+  ctx.strokeStyle = secondsHandColor.value;
+  ctx.fillStyle = secondsHandColor.value;
   ctx.lineWidth = 4;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
