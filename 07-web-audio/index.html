@@ -8,34 +8,32 @@
     <title>Web Audio API</title>
   </head>
   <body>
-    <h1>Web Audio API</h1>
-
     <div id="audio-player">
       <audio
         src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
         id="audio"
       ></audio>
+
+      <div class="controls">
+        <button id="play-pause">Play</button>
+        <button id="stop">Stop</button>
+      </div>
+
+      <div class="volume-control">
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.5"
+        />
+
+        <div id="slider-progress"></div>
+      </div>
+
+      <div id="volume-value">Volume: 100%</div>
+      <div id="timestamp">0:00 / 0:00</div>
     </div>
-
-    <div class="class">
-      <button id="play-pause">Play</button>
-      <button id="stop">Stop</button>
-    </div>
-
-    <div class="volume-control">
-      <input
-        type="range"
-        id="volume-slider"
-        min="0"
-        max="1"
-        step="0.01"
-        value="0.5"
-      />
-
-      <div id="slider-progress"></div>
-    </div>
-
-    <div id="volume-value">Volume: 100%</div>
-    <div id="timestamp">0:00 / 0:00</div>
   </body>
 </html>
