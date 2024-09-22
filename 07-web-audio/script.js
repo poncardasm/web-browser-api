@@ -26,23 +26,29 @@ function updateSlider() {
   const value = volumeSlider.value;
   const percent = value * 100;
   sliderProgress.style.width = percent + '%';
-  volumeValue.textContent = `Volume: ${Math.round(percent)}%`;
+  volumeValue.textContent = `Volume: ${Math.round(percent)
+    .toString()
+    .padStart(2, '0')}%`;
   audio.volume = value;
 }
 
 volumeSlider.addEventListener('input', updateSlider);
 
 audio.addEventListener('timeupdate', () => {
-  const currentMinutes = Math.floor(audio.currentTime / 60);
-  const currentSeconds = Math.floor(audio.currentTime % 60);
-  const durationMinutes = Math.floor(audio.duration / 60);
-  const durationSeconds = Math.floor(audio.duration % 60);
+  const currentMinutes = Math.floor(audio.currentTime / 60)
+    .toString()
+    .padStart(2, '0');
+  const currentSeconds = Math.floor(audio.currentTime % 60)
+    .toString()
+    .padStart(2, '0');
+  const durationMinutes = Math.floor(audio.duration / 60)
+    .toString()
+    .padStart(2, '0');
+  const durationSeconds = Math.floor(audio.duration % 60)
+    .toString()
+    .padStart(2, '0');
 
-  const formattedTime = `${currentMinutes}:${currentSeconds
-    .toString()
-    .padStart(2, '0')} / ${durationMinutes}:${durationSeconds
-    .toString()
-    .padStart(2, '0')}`;
+  const formattedTime = `${currentMinutes}:${currentSeconds} / ${durationMinutes}:${durationSeconds}`;
   timestamp.textContent = formattedTime;
 });
 
