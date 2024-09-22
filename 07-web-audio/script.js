@@ -26,4 +26,10 @@ function updateSlider() {
   const value = volumeSlider.value;
   const percent = value * 100;
   sliderProgress.style.width = percent + '%';
+  volumeValue.textContent = `Volume: ${Math.round(percent)}%`;
+  audio.volume = value;
 }
+
+volumeSlider.addEventListener('input', updateSlider);
+
+updateSlider();
