@@ -32,4 +32,18 @@ function updateSlider() {
 
 volumeSlider.addEventListener('input', updateSlider);
 
+audio.addEventListener('timeupdate', () => {
+  const currentMinutes = Math.floor(audio.currentTime / 60);
+  const currentSeconds = Math.floor(audio.currentTime % 60);
+  const durationMinutes = Math.floor(audio.duration / 60);
+  const durationSeconds = Math.floor(audio.duration % 60);
+
+  const formattedTime = `${currentMinutes}:${currentSeconds
+    .toString()
+    .padStart(2, '0')} / ${durationMinutes}:${durationSeconds
+    .toString()
+    .padStart(2, '0')}`;
+  timestamp.textContent = formattedTime;
+});
+
 updateSlider();
