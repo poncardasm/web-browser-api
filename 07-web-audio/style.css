@@ -33,7 +33,7 @@ body {
 
 button {
   width: 100%;
-  background-color: #7f56d9;
+  background-color: #079455;
   border: none;
   color: #ffff;
   padding: 12px 24px;
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-  background-color: #6941c6;
+  background-color: #067647;
 }
 
 #stop {
