@@ -36,7 +36,32 @@ h1 {
   font-weight: 300;
 }
 
+.keys {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.key {
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+
+.key kbd {
+  margin-right: 20px;
+}
+
+.keys .playing kbd,
+.keys .playing .sound {
+  transition: all 0.07s;
+}
+
 .keys .playing kbd {
   transform: scale(1.2);
-  transition: all 0.07s;
+  transform-origin: center;
+}
+
+.keys .playing .sound {
+  font-weight: 800;
+  font-size: 1.2em;
 }
