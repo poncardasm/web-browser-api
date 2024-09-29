@@ -13,6 +13,7 @@ export default defineConfig({
         animated_clock_2: resolve(__dirname, `06-animated-clock-2/index.html`),
         web_audio_api: resolve(__dirname, `07-web-audio/index.html`),
         music_player_project: resolve(__dirname, `08-music-player/index.html`),
+        drum_machine_project: resolve(__dirname, `09_drum-machine/index.html`),
       },
     },
   },
