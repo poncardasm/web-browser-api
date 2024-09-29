@@ -15,3 +15,24 @@ function playSound(e) {
     key.classList.remove('playing');
   }, 100);
 }
+
+// Function to simulate keydown events
+function simulateKeydown(keyCode) {
+  const event = new KeyboardEvent('keydown', { keyCode: keyCode });
+  window.dispatchEvent(event);
+}
+
+// Auto-play a specific key combination
+function autoPlaySequence() {
+  const sequence = [83, 68, 83, 65, 68, 70, 74, 83, 71, 75];
+  let delay = 0;
+
+  sequence.forEach((keyCode) => {
+    setTimeout(() => {
+      simulateKeydown(keyCode);
+    }, delay);
+    delay += 300;
+  });
+}
+
+// autoPlaySequence();
