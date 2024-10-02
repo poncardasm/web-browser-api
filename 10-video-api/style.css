@@ -56,6 +56,6 @@ button {
   background-color: darkred;
 }
 
-.controls button:hover {
+button:hover {
   color: #ff0;
 }
