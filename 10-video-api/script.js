@@ -2,7 +2,7 @@ const video = document.getElementById('video');
 const play = document.getElementById('play');
 const pause = document.getElementById('pause');
 const stop = document.getElementById('stop');
-const currentTime = document.getElementById('current-time');
+const timestamp = document.getElementById('timestamp');
 
 // Play & pause video
 play.addEventListener('click', () => {
@@ -32,5 +32,5 @@ video.addEventListener('timeupdate', () => {
     seconds.toString().padStart(2, '0'),
   ].join(':');
 
-  currentTime.innerText = formattedTime;
+  timestamp.innerText = formattedTime;
 });

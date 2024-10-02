@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Controls */
+.controls {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 14px 20px;
+  background-color: #000;
+  display: inline-block;
+  font-family: monospace;
+  border-radius: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: #000;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 14px 20px;
+  font-family: monospace;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+#play {
+  background-color: darkgreen;
+}
+
+#pause {
+  background-color: darkgoldenrod;
+}
+
+#stop {
+  background-color: darkred;
+}
+
+.controls button:hover {
+  color: #ff0;
+}
