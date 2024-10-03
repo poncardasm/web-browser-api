@@ -22,15 +22,37 @@ function updateIcon() {
   }
 }
 
-video.addEventListener('click', playPauseVideo);
-play.addEventListener('click', playPauseVideo);
-video.addEventListener('play', updateIcon);
-video.addEventListener('pause', updateIcon);
-
 // Stop video
 function stopVideo() {
   video.currentTime = 0;
   video.pause();
 }
 
+// Update progress & timestamp
+function updateProgress() {
+  progress.value = (video.currentTime / video.duration) * 100;
+
+  // Get minutes
+  let minutes = Math.floor(video.currentTime / 60);
+  if (minutes < 10) {
+    minutes = '0' + String(minutes);
+  }
+
+  // Get seconds
+  let seconds = Math.floor(video.currentTime % 60);
+  if (seconds < 10) {
+    seconds = '0' + String(seconds);
+  }
+
+  timestamp.innerText = `${minutes}:${seconds}`;
+}
+
+video.addEventListener('click', playPauseVideo);
+play.addEventListener('click', playPauseVideo);
+video.addEventListener('play', updateIcon);
+video.addEventListener('pause', updateIcon);
 stop.addEventListener('click', stopVideo);
+video.addEventListener('timeupdate', updateProgress);
+progress.addEventListener('change', () => {
+  video.currentTime = (progress.value * video.duration) / 100;
+});
