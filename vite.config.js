@@ -15,6 +15,10 @@ export default defineConfig({
         music_player_project: resolve(__dirname, `08-music-player/index.html`),
         drum_machine_project: resolve(__dirname, `09-drum-machine/index.html`),
         video_api: resolve(__dirname, `10-video-api/index.html`),
+        video_player_project: resolve(
+          __dirname,
+          `11-video-player-project/index.html`
+        ),
       },
     },
   },
