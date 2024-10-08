@@ -19,6 +19,10 @@ export default defineConfig({
           __dirname,
           `11-video-player-project/index.html`
         ),
+        speech_synthesis_project: resolve(
+          __dirname,
+          `12-speech-synthesis/index.html`
+        ),
       },
     },
   },
